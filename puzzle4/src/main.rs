@@ -20,12 +20,15 @@ fn main() {
         let (dir, val) = match values {
             Some(tup) => match tup {
                 (a, b) => (a.to_string(), b.parse::<i64>().unwrap()),
-            }
+            },
             None => continue,
         };
 
         match dir.as_str() {
-            "forward" => { x += val; y += aim * val },
+            "forward" => {
+                x += val;
+                y += aim * val
+            }
             "down" => aim += val,
             "up" => aim -= val,
             &_ => (),

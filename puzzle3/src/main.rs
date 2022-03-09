@@ -19,7 +19,7 @@ fn main() {
         let (dir, val) = match values {
             Some(tup) => match tup {
                 (a, b) => (a.to_string(), b.parse::<i64>().unwrap()),
-            }
+            },
             None => continue,
         };
 
